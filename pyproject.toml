@@ -1,0 +1,24 @@
+
+[build-system]
+requires = ["setuptools>=68,<76"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlclips"
+version = "0.1.0"
+description = "Mobile Legends gameplay highlights automation"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+
+dependencies = [
+    "click>=8.1,<9",
+    "watchdog>=4,<7",
+    "rich>=13,<15",
+    "platformdirs>=4,<5"
+]
+
+[project.scripts]
+mlclips = "mlclips.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
